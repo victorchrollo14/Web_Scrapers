@@ -50,3 +50,6 @@ def newpageScrape(link):
     final_output = [address,website,country,serv_cov,Lang_spkn,item1,item1_des,item2,item2_des,item3,item3_des,item4,item4_des,item5,item5_des,item6,item6_des]
 
     return final_output
+
+def data_ouput():
+    pass

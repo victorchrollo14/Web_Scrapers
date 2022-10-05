@@ -1,8 +1,6 @@
 from itertools import count
 from bs4 import BeautifulSoup
 import requests
-from selenium import webdriver
-import os
 from new_page import newpageScrape
 
 
@@ -33,8 +31,8 @@ for i,row in enumerate(table):
         product_list.append(value['title'])
     
     link = row.contents[1].a['href']
-    newpageScrape(link)
     extra_items = newpageScrape(link)
+    
     print(company_name,Area,sell_type,brands_crd,Min_order_val,product_list)
     print(extra_items)
     print('\n_________________________________________')
