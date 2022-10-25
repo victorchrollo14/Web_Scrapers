@@ -1,8 +1,7 @@
-# WEb-Scraping-Projects
+# Web-Scraping-Projects
 
 This Repository contains a list of all the web-scraping projects
 I have worked On.
-
 
 ## jobs.py
 

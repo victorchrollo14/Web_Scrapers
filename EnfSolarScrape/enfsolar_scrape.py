@@ -1,4 +1,3 @@
-from itertools import count
 from bs4 import BeautifulSoup
 import requests
 from new_page import newpageScrape
