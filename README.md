@@ -14,3 +14,9 @@ such as (company name, area, products they are selling , distribution etc) from 
 Then click on the company name which leads to a new page, from where we need to scrape extra data
 such as (company email, address, phone number, service coverage, language spoken , items sold, description of all
 the items sold).
+
+## AI_Startups
+
+ai_scraper.py is used to scrape data from the site "https://topstartups.io/" 
+This gets all the details of top startups around the world such as 
+(startup name , what they do, tech used, founded year , no of employees, website, linkedIn etc)
