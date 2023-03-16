@@ -30,10 +30,28 @@ def getImages(filename):
     soup = BeautifulSoup(folder, "lxml")
     product_matrix = soup.find('ul', class_="matrix")
     product_list = product_matrix.find_all('li')
+    count = 0
 
     for product in product_list:
-        print(product.prettify())
-        break
+        try:
+            image1 = product.find("img", class_="feature")
+            image2 = product.find("img", class_="swap")
+            images = [image1, image2]
+            for image in images:
+                img1_links = image["data-srcset"].split(" ")
+                links = list(filter(None, img1_links))
+                for link in links:
+                    if ("530x" in link):
+                        link = f'https:{link}'.split("?")[0]
+                        print(link)
+                        count += 1
+                        break
+        except Exception as e:
+            print(e)
+
+        print("\n \n")
+
+    print(count)
 
 
 urlList = ["mens-shirts", "mens-knits", "mens-sweaters", "mens-bottoms",
